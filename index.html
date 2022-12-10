@@ -5,37 +5,174 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mine</title>
+
     <link rel="stylesheet" href="assets/styles/output.css" />
+
+    <link rel="stylesheet" href="assets/styles/confetti.css" />
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
-  <body class="bg-gradient-to-r from-[#ec008c] to-[#fc6767] h-screen">
-    <div class="flex items-center justify-center h-screen">
-      <!-- Card -->
-      <div class="flex flex-col items-center p-5 bg-white rounded-lg">
-        <span class="text-lg font-semibold text-gray-600"
+  <body
+    id="body"
+    class="bg-gradient-to-r from-[#ec008c] to-[#fc6767] h-screen overflow-hidden"
+  >
+    <!-- Card 1 -->
+    <div
+      data-aos="fade-right"
+      id="cardOne"
+      class="flex items-center justify-center h-screen"
+    >
+      <!-- Card 1 -->
+      <div class="flex flex-col items-center p-5 bg-white rounded-lg shadow-lg">
+        <span class="text-xl mb-2 font-semibold text-gray-600"
           >Hai ada pesan buat kamu Disini</span
         >
-        <img src="assets/img/mail.png" alt="" srcset="" class="w-52" />
+        <img
+          onclick="mulai()"
+          src="assets/img/mail.png"
+          alt=""
+          srcset=""
+          class="w-52"
+        />
         <span class="text-lg font-semibold text-gray-600"
           >Buka pesan ini yaa cantik</span
         >
       </div>
     </div>
-    <div class="p-5">
-      <div class="card">
-        <span class="text-pesan">Hai ada pesan buat kamu Disini</span>
-      </div>
-      <div class="card">
-        <span class="text-pesan">Hai ada pesan buat kamu Disini</span>
-      </div>
-      <div class="card">
-        <span class="text-pesan">Hai ada pesan buat kamu Disini</span>
-      </div>
-      <div class="card">
-        <span class="text-pesan">Hai ada pesan buat kamu Disini</span>
-      </div>
-      <div class="card">
-        <span class="text-pesan">Hai ada pesan buat kamu Disini</span>
+    <!-- Confetti -->
+    <div
+      id="confetti"
+      class="hidden z-50 justify-center items-center w-full h-full absolute"
+    >
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+    </div>
+    <!-- Card 2 -->
+    <div id="cardTwo" class="hidden items-center justify-center h-screen">
+      <!-- Card 2 -->
+      <div class="flex flex-col items-center p-5 bg-white rounded-lg shadow-lg">
+        <span class="text-xl mb-2 font-semibold text-gray-600"
+          >Selamat ulang tahun cantiknya aku</span
+        >
+        <img
+          src="assets/img/milkandmocha-couple.gif"
+          alt=""
+          srcset=""
+          class="w-52"
+        />
+        <span class="text-lg font-semibold text-gray-600"
+          >Baca pesan di bawah ya cantik</span
+        >
       </div>
     </div>
+
+    <!-- Card Pesan -->
+    <div id="pesan" class="p-5">
+      <div data-aos-delay="50" data-aos="zoom-in" class="card">
+        <span class="text-pesan"
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque eos
+          reiciendis perferendis consequuntur cupiditate? Nihil consectetur
+          earum veritatis, facilis, ratione eum aperiam cum vel eligendi
+          blanditiis vitae repellendus quia harum placeat, consequuntur enim
+          ipsa fugiat quam rerum animi! Tenetur porro animi voluptas illo
+          asperiores corrupti autem quasi dolore at ullam.</span
+        >
+      </div>
+      <div data-aos-delay="50" data-aos="zoom-in-right" class="card">
+        <span class="text-pesan"
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque eos
+          reiciendis perferendis consequuntur cupiditate? Nihil consectetur
+          earum veritatis, facilis, ratione eum aperiam cum vel eligendi
+          blanditiis vitae repellendus quia harum placeat, consequuntur enim
+          ipsa fugiat quam rerum animi! Tenetur porro animi voluptas illo
+          asperiores corrupti autem quasi dolore at ullam.</span
+        >
+      </div>
+      <div data-aos-delay="50" data-aos="zoom-in-left" class="card">
+        <span class="text-pesan"
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque eos
+          reiciendis perferendis consequuntur cupiditate? Nihil consectetur
+          earum veritatis, facilis, ratione eum aperiam cum vel eligendi
+          blanditiis vitae repellendus quia harum placeat, consequuntur enim
+          ipsa fugiat quam rerum animi! Tenetur porro animi voluptas illo
+          asperiores corrupti autem quasi dolore at ullam.</span
+        >
+      </div>
+      <div data-aos-delay="50" data-aos="zoom-in-right" class="card">
+        <span class="text-pesan"
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque eos
+          reiciendis perferendis consequuntur cupiditate? Nihil consectetur
+          earum veritatis, facilis, ratione eum aperiam cum vel eligendi
+          blanditiis vitae repellendus quia harum placeat, consequuntur enim
+          ipsa fugiat quam rerum animi! Tenetur porro animi voluptas illo
+          asperiores corrupti autem quasi dolore at ullam.</span
+        >
+      </div>
+      <div data-aos-delay="50" data-aos="zoom-in-left" class="card">
+        <span class="text-pesan"
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque eos
+          reiciendis perferendis consequuntur cupiditate? Nihil consectetur
+          earum veritatis, facilis, ratione eum aperiam cum vel eligendi
+          blanditiis vitae repellendus quia harum placeat, consequuntur enim
+          ipsa fugiat quam rerum animi! Tenetur porro animi voluptas illo
+          asperiores corrupti autem quasi dolore at ullam.</span
+        >
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <div
+        class="bg-white md:w-1/2 px-5 py-2 flex justify-center rounded-tr-xl rounded-tl-xl md:p-2"
+      >
+        <span class="">Made with love by aufaramdhn</span>
+      </div>
+    </div>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      function body() {
+        body = document.querySelector("#body");
+        body.classList.remove("overflow-hidden");
+        body.classList.add("overflow-y-scroll");
+      }
+      function cardOne() {
+        cardOne = document.querySelector("#cardOne");
+        cardOne.classList.remove("flex");
+        cardOne.classList.add("hidden");
+        cardOne.classList.add("opacity-0");
+      }
+      function cardTwo() {
+        cardTwo = document.querySelector("#cardTwo");
+        cardTwo.classList.remove("hidden");
+        cardTwo.classList.add("flex");
+      }
+      function confetti() {
+        confetti = document.querySelector("#confetti");
+        confetti.classList.remove("hidden");
+        confetti.classList.add("flex");
+      }
+      function mulai() {
+        body();
+        setTimeout(function () {
+          cardOne();
+          confetti();
+          cardTwo();
+        }, 1000);
+      }
+    </script>
   </body>
 </html>

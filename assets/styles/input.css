@@ -2,11 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Regular.ttf");
+}
+@layer base {
+  html {
+    font-family: "Rubik";
+  }
+}
+
 @layer components {
   .card {
-    @apply flex flex-col items-center p-5 mb-3 bg-white rounded-lg;
+    @apply flex flex-col items-center p-5 mb-3 bg-white rounded-lg shadow-lg;
   }
   .text-pesan {
-    @apply text-lg font-semibold text-gray-600;
+    @apply text-lg font-semibold text-gray-600 text-center;
   }
 }
